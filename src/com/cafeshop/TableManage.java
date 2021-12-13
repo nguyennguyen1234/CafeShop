@@ -32,6 +32,7 @@ public class TableManage {
             return;
         } else {
             System.out.println("Đặt bàn thành công.");
+            Menu.printMenuList();
             tables.get(number-1).setOccupied("Occupied");
             chooseFood(tables.get(number-1));
         }
