@@ -10,11 +10,11 @@ public class Search {
         Scanner sc = new Scanner(System.in);
         String name = sc.nextLine();
         for(Staff s : StaffManager.staffList) {
-            if(s.getName().equals(name)) {
+            if(s.getName().equals(name) || s.getName().toLowerCase().equals(name)) {
                 String staff = s.getName()+"\t\t" +s.getAge() + "\t\t" +s.getPosition();
                 System.out.println(staff);
                 return;
-            } else if (s.getName().contains(name)) {
+            } else if (s.getName().contains(name) || s.getName().toLowerCase().contains(name)) {
                 String staff = s.getName()+"\t\t" +s.getAge() + "\t\t" +s.getPosition();
                 System.out.println(staff);
                 exist =true;
@@ -33,11 +33,11 @@ public class Search {
         Scanner sc = new Scanner(System.in);
         String name = sc.nextLine();
         for(Food s : Menu.foodList) {
-            if(s.getName().equals(name)) {
+            if(s.getName().equals(name)|| s.getName().toLowerCase().equals(name)) {
                 String food = s.getName()+"\t\t" +s.getPrice() + "\t\t" +s.getPrice();
                 System.out.println(food);
                 return;
-            } else if (s.getName().contains(name)) {
+            } else if (s.getName().contains(name)|| s.getName().toLowerCase().contains(name)) {
                 String food = s.getName()+"\t\t" +s.getPrice() + "\t\t" +s.getPrice();
                 System.out.println(food);
                 exist =true;

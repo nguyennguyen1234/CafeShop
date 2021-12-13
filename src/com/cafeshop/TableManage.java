@@ -45,7 +45,7 @@ public class TableManage {
         //table.addFood(food);
 
         while(!food.equals("")) {
-            System.out.println("Nhập tên đồ ăn:");
+            System.out.println("Nhập tên đồ ăn:(Double enter to complete choosing.)");
             food = sc.nextLine();
             table.addFood(food);
             if (food.equals("")) {

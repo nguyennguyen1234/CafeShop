@@ -44,11 +44,11 @@ public class Table {
     public void addFood(String name) {
         boolean exist = false;
         for (Food s : Menu.foodList) {
-            if (s.getName().equals(name)) {
+            if (s.getName().equals(name)|| s.getName().toLowerCase().equals(name)) {
                 food.add(s);
                 System.out.println("Đặt món thành công.");
                 return;
-            } else if (s.getName().contains(name)&&!name.equals("")) {
+            } else if ((s.getName().contains(name)|| s.getName().toLowerCase().contains(name))&&!name.equals("")) {
                 //System.out.println("Các món liên quan:");
                 String food = s.getName() + "\t\t" + s.getPrice() + "\t\t" + s.getPrice();
                 System.out.println(food);
@@ -56,7 +56,7 @@ public class Table {
             }
 
         }
-        if (!exist) {
+        if (!exist && !name.equals("")) {
             System.out.println("Không có món ăn trên.");
             return;
         }
