@@ -18,6 +18,7 @@ public class Main {
         System.out.println("Đặt bàn : Press 5.");
         System.out.println("Thanh toán : Press 6.");
         System.out.println("Xem doanh số : Press 7.");
+        System.out.println("Xem danh sách các bàn: Press 8.");
         System.out.println("Trở về bảng điều khiển : Press 0");
     }
 
@@ -53,6 +54,11 @@ public class Main {
                    break;
                case 7:
                    CafeShopManager.getRevenue();
+                   break;
+               case 8 :
+                   TableManage.printTable();
+                   break;
+               default:
                    break;
            }
        }
